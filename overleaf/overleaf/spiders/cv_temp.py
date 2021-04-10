@@ -24,7 +24,7 @@ class CvTempSpider(scrapy.Spider):
             # create web page with cv images as hyperlinks to the cv url
             html = ""
             html += """<a href="{cv_url}"
-            target="_blank">
+            target="_blank
             <img src="{cv_image_url}" height="50%" width="30%"/>
             <a/>.
             """.format(cv_url=cv_url, cv_image_url=cv_image_url)
@@ -32,3 +32,4 @@ class CvTempSpider(scrapy.Spider):
             with open("./data/cv_templates.html", mode="a") as web_page:
                 web_page.write(html)
                 web_page.close()
+                
